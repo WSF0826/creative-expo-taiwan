@@ -138,10 +138,10 @@
       </h2>
       <p class="text-xs sm:text-sm text-slate-500 mb-4">點擊下方「全圖預覽」或「分區按鈕」即可開啟大圖，並支援縮放查看攤位細節。</p>
 
-      <!-- 1. 完整地圖預覽卡片 (已修正 URL 安全編碼) -->
-      <div class="mb-5 cursor-pointer rounded-xl overflow-hidden border-2 border-blue-200 hover:border-blue-400 transition shadow-sm bg-slate-100 relative group" onclick="openLightbox('%E5%AE%8C%E6%95%B4%E5%9C%B0%E5%9C%96_3.jpg', '完整展區總覽地圖')">
+      <!-- 1. 完整地圖預覽卡片 (已改為指向 map-full.jpg) -->
+      <div class="mb-5 cursor-pointer rounded-xl overflow-hidden border-2 border-blue-200 hover:border-blue-400 transition shadow-sm bg-slate-100 relative group" onclick="openLightbox('map-full.jpg', '完整展區總覽地圖')">
         <div class="w-full flex items-center justify-center bg-slate-200 relative overflow-hidden min-h-[220px]">
-          <img src="%E5%AE%8C%E6%95%B4%E5%9C%B0%E5%9C%96_3.jpg" alt="文博會完整地圖" class="w-full h-auto object-contain max-h-[400px]" onerror="this.style.display='none'; document.getElementById('full-map-fallback').classList.remove('hidden');">
+          <img src="map-full.jpg" alt="文博會完整地圖" class="w-full h-auto object-contain max-h-[400px]" onerror="this.style.display='none'; document.getElementById('full-map-fallback').classList.remove('hidden');">
           <div id="full-map-fallback" class="hidden absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 text-white p-6 flex flex-col justify-center items-center text-center">
             <span class="text-4xl mb-2">🗺️</span>
             <h4 class="font-bold text-lg text-amber-300">2026 文博會 1樓完整地圖</h4>
@@ -153,7 +153,7 @@
         </div>
       </div>
 
-      <!-- 2. 分區按鈕網格 (已修正 URL 安全編碼) -->
+      <!-- 2. 分區按鈕網格 (維持使用原本的中文檔名編碼) -->
       <h3 class="text-sm font-bold text-slate-800 mb-2">📍 快速查看分區亮點：</h3>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-2.5">
         <button onclick="openLightbox('%E5%B7%A6%E4%B8%8A%E5%8D%80%E5%A1%8A_3.jpg', '左上區塊 - J1 原創角色 & 🛋️ 休息區')" class="p-3 bg-blue-50 border border-blue-200 rounded-xl text-left hover:bg-blue-100 transition shadow-sm active:scale-95">
@@ -251,9 +251,9 @@
       }
     }
 
-    /* 各區地圖亮點資料庫 (已同步檔名帶有 _3.jpg) */
+    /* 各區地圖亮點資料庫 */
     const sectionDetails = {
-      '完整地圖_3.jpg': {
+      'map-full.jpg': {
         tag: '🗺️ 完整展區總覽',
         desc: '涵蓋 1 樓全區攤位：J1 原創角色、I 黑潮新樂園、大會舞台與休息區',
         highlights: ['📍 左下：I 黑潮新樂園', '📍 左上/右上：🛋️ 沙發休息區', '📍 右下：🩹 醫護室']
